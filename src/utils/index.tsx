@@ -43,6 +43,7 @@ export const filterdata = () => {
 };
 
 export const getPostsFromApi = async () => {
+  // it could be in .env file but in order to run it directly link added.
   await axios
     .get(
       'https://api.themoviedb.org/3/movie/popular/?api_key=2b697242dc7c04c8bed4d10fcb480f87',

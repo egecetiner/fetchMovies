@@ -1,8 +1,8 @@
-import SearchIcon from '@mui/icons-material/Search';
 import {Grid} from '@mui/material';
 import {observer} from 'mobx-react-lite';
 import React, {useEffect} from 'react';
 import {Spinner} from 'react-bootstrap';
+import {NavigatonBar} from './components/navBar';
 import {TitlebarImageList} from './components/titleBarImageList';
 import {movieStore} from './stores/movieStore';
 import {filterdata, getLocalStorage, getPostsFromApi} from './utils';
@@ -23,23 +23,7 @@ const App = observer(() => {
         alignItems: 'center',
         justifyContent: 'center',
       }}>
-      <nav className='navbar bg-dark navbar-expand-sm navbar-dark sticky-top mt-0 justify-content-around'>
-        <a href='#element_target' className='badge badge-warning'>
-          Go to Favourites
-        </a>
-
-        <form className='d-flex justify-content-center align-items-center  '>
-          <SearchIcon sx={{color: 'white', marginRight: 1}}></SearchIcon>
-          <input
-            className='pt-1 px-2 '
-            value={movieStore.searchValue}
-            onChange={(event: any) =>
-              movieStore.setSearchValue(event.target.value)
-            }
-            placeholder='Search Movie...'
-          />
-        </form>
-      </nav>
+      <NavigatonBar />
       <Grid sx={{justifyContent: 'center'}} container spacing={2}>
         <Grid
           style={{
