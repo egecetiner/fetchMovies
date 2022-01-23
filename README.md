@@ -4,7 +4,7 @@ To run : npm i && npm start
 
 - State management is accomplished by mobx.
 - MUI and Bootstrap is used for user interface.
-- Data is fetched from the movie database by axios. ( https://www.themoviedb.org/documentation/api )
+- Data is fetched from the movie database by axios.(https://www.themoviedb.org/documentation/api)
 - React hooks and functional approach is used in order to develop components.
 - Favourite movies saved into local storage and reloaded from there while opening the app.
 
